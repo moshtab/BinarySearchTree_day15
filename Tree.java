@@ -13,4 +13,6 @@ interface Tree<T extends Comparable<T>> {
 
 	public boolean isEmpty();
 
+	public boolean search(T data);
+
 }

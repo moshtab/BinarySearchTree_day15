@@ -104,4 +104,20 @@ public class BinarySearchTree<T extends Comparable<T>> implements Tree<T> {
 		return root == null;
 	}
 
+	public boolean search(T data) {
+		return searchFromTree(root, data);
+	}
+
+	private boolean searchFromTree(Node<T> root, T data) {
+		if (root == null) {
+			return false;
+		} else if (data.compareTo(root.data) > 0) {
+			return searchFromTree(root.right, data);
+		} else if (data.compareTo(root.data) < 0) {
+			return searchFromTree(root.left, data);
+		} else {
+			return true;
+		}
+	}
+
 }

@@ -22,6 +22,7 @@ public class BinaryTreeDemo {
 		tree.preOrder();
 		tree.postOrder();
 		tree.bfs();
+		System.out.println(tree.search(63));
 
 	}
 
